@@ -1,5 +1,5 @@
 # Java Arithmetic Calcualtor
-Basic note taking app made with Flask.
+A simple calculator that can perform basic arithmetic operations.
 
 ## Tools used
 - [Swing](https://www.oracle.com/java/technologies/swing-javadocs-2.html)
