@@ -139,6 +139,11 @@ public class CalculatorWindow extends javax.swing.JFrame {
 
         DecimalPointButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DecimalPointButton.setText(".");
+        DecimalPointButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DecimalPointButtonMouseClicked(evt);
+            }
+        });
 
         AddButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AddButton.setText("+");
@@ -166,6 +171,11 @@ public class CalculatorWindow extends javax.swing.JFrame {
 
         DivideButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DivideButton.setText("÷");
+        DivideButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DivideButtonMouseClicked(evt);
+            }
+        });
 
         ClearNumberFieldButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ClearNumberFieldButton.setText("AC");
@@ -184,11 +194,6 @@ public class CalculatorWindow extends javax.swing.JFrame {
         });
 
         NumberField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        NumberField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumberFieldActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -276,122 +281,73 @@ public class CalculatorWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NumberFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumberFieldActionPerformed
-        // TODO add your handling code 
-    }//GEN-LAST:event_NumberFieldActionPerformed
-
     private void ZeroButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ZeroButtonMouseClicked
         NumberField.setText(NumberField.getText() + "0");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
-
-
+        getInput();
     }//GEN-LAST:event_ZeroButtonMouseClicked
 
     private void OneButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OneButtonMouseClicked
         NumberField.setText(NumberField.getText() + "1");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
-
+        getInput();
     }//GEN-LAST:event_OneButtonMouseClicked
 
     private void TwoButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TwoButtonMouseClicked
         NumberField.setText(NumberField.getText() + "2");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
-
+        getInput();
     }//GEN-LAST:event_TwoButtonMouseClicked
 
     private void ThreeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ThreeButtonMouseClicked
         NumberField.setText(NumberField.getText() + "3");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_ThreeButtonMouseClicked
 
     private void FourButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FourButtonMouseClicked
         NumberField.setText(NumberField.getText() + "4");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_FourButtonMouseClicked
 
     private void FiveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiveButtonMouseClicked
         NumberField.setText(NumberField.getText() + "5");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_FiveButtonMouseClicked
 
     private void SixButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SixButtonMouseClicked
         NumberField.setText(NumberField.getText() + "6");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_SixButtonMouseClicked
 
     private void SevenButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SevenButtonMouseClicked
         NumberField.setText(NumberField.getText() + "7");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
-
+        getInput();
     }//GEN-LAST:event_SevenButtonMouseClicked
 
     private void EightButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EightButtonMouseClicked
         NumberField.setText(NumberField.getText() + "8");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_EightButtonMouseClicked
 
     private void NineButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NineButtonMouseClicked
         NumberField.setText(NumberField.getText() + "9");
-        if (separate == false) {
-            number = Double.parseDouble(NumberField.getText());
-        } else {
-            number2 = Double.parseDouble(NumberField.getText());
-        }
+        getInput();
     }//GEN-LAST:event_NineButtonMouseClicked
 
-    private void ClearNumberFieldButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearNumberFieldButtonMouseClicked
+    private void DecimalPointButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_DecimalPointButtonMouseClicked
+        NumberField.setText(NumberField.getText() + ".");
+        getInput();
+    }// GEN-LAST:event_DecimalPointButtonMouseClicked
 
-        NumberField.setText("");
-
-    }//GEN-LAST:event_ClearNumberFieldButtonMouseClicked
-
+  
     private void AddButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMouseClicked
         separate = true;
         NumberField.setText("");
         operator = "+";
     }//GEN-LAST:event_AddButtonMouseClicked
 
-    private void EqualsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EqualsButtonMouseClicked
-        calculate();
-        separate = false;
-
-    }//GEN-LAST:event_EqualsButtonMouseClicked
+    private void MinusButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_MinusButtonMouseClicked
+        separate = true;
+        NumberField.setText("");
+        operator = "-";
+    }// GEN-LAST:event_MinusButtonMouseClicked
 
     private void MultiplyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MultiplyButtonMouseClicked
         separate = true;
@@ -399,11 +355,21 @@ public class CalculatorWindow extends javax.swing.JFrame {
         operator = "*";
     }//GEN-LAST:event_MultiplyButtonMouseClicked
 
-    private void MinusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinusButtonMouseClicked
+    private void DivideButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DivideButtonMouseClicked
         separate = true;
         NumberField.setText("");
-        operator = "-";
-    }//GEN-LAST:event_MinusButtonMouseClicked
+        operator = "/";
+    }//GEN-LAST:event_DivideButtonMouseClicked
+
+    private void EqualsButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_EqualsButtonMouseClicked
+        calculate();
+        separate = false;
+    }// GEN-LAST:event_EqualsButtonMouseClicked
+
+    private void ClearNumberFieldButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ClearNumberFieldButtonMouseClicked
+        NumberField.setText("");
+    }// GEN-LAST:event_ClearNumberFieldButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -443,22 +409,34 @@ public class CalculatorWindow extends javax.swing.JFrame {
         });
     }
 
+    public void getInput() {
+        if (separate == false) {
+            number = Double.parseDouble(NumberField.getText());
+        } else {
+            number2 = Double.parseDouble(NumberField.getText());
+        }
+    }
+
     public void calculate() {
         switch (operator) {
             case "+":
                 answer = number + number2;
+                answer = Math.round(answer * 100.0) / 100.0;
                 NumberField.setText(String.valueOf(answer));
                 break;
             case "-":
                 answer = number - number2;
+                answer = Math.round(answer * 100.0) / 100.0;
                 NumberField.setText(String.valueOf(answer));
                 break;
             case "*":
                 answer = number * number2;
+                answer = Math.round(answer * 100.0) / 100.0;
                 NumberField.setText(String.valueOf(answer));
                 break;
             case "/":
                 answer = number / number2;
+                answer = Math.round(answer * 100.0) / 100.0;
                 NumberField.setText(String.valueOf(answer));
                 break;
             default:
