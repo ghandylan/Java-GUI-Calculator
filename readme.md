@@ -1,5 +1,7 @@
 # Java Arithmetic Calcualtor
-A simple calculator that can perform basic arithmetic operations.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\
+A simple calculator that can perform basic arithmetic operations.\
+&nbsp;
 
 ## Tools used
 - [Swing](https://www.oracle.com/java/technologies/swing-javadocs-2.html)
